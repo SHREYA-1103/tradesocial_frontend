@@ -425,51 +425,73 @@ hr {
 
 }
 
-#contact{
+#Contact {
     padding: 40px 0;
 }
 
-.contact-left{
-    flex-basis: 35%;
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.contact-right{
-    flex-basis: 60%;
+.contact-left, .contact-right {
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.contact-left p{
-    margin-top: 30px;
+.contact-left {
+    flex-basis: 45%;
 }
 
-.contact-left p i{
-    color: #d81e56;
+.contact-right {
+    flex-basis: 50%;
+}
+
+.contact-info {
+    background-color: #343434;
+    color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.contact-info i {
+    color: #3fe915;
     margin-right: 15px;
     font-size: 25px;
 }
 
-.social-icons{
-    margin-top: 30px;
+form input, form textarea {
+    width: 100%;
+    border: 1px solid #343434;
+    outline: none;
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    color: #343434;
+    font-size: 18px;
+    border-radius: 6px;
 }
 
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
+form .bt2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
-.social-icons a:hover{
-    color: #d81e56;
-    transform: translateY(-5px); /* for moving the object upwards on hovering */
-}
-
-.btn{
+.btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #d81e56;
+    border: 1px solid #3fe915;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -478,41 +500,26 @@ hr {
     transition: background 0.5s;
 }
 
-.btn:hover{
-    background: #d81e56;
+.btn:hover {
+    background: #3fe915;
 }
 
-.btn.btn2{
+.btn.btn2 {
     display: inline-block;
-    background: #d81e56;
+    background: #3fe915;
 }
 
-.btn.btn3{
+.btn.btn3 {
     display: block;
-    background: #d81e56;
+    background: #343434;
+    color: white;
 }
 
-.contact-right form{
-    width: 100%;
-}
-
-form input, form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-form .bt2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
+@media (max-width: 768px) {
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 

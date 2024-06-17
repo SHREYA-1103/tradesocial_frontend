@@ -205,6 +205,59 @@ body .cards {
     color: #343434;
 }
 
+#About {
+    background-color: #bbcdcc;
+    padding: 40px 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#abt-sec {
+    line-height: 1.6;
+}
+
+#abt-sec h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-wrapper {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 50%;
+}
+
+#p2 {
+    text-align: justify;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.brand-carousel {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.carousel-logo {
+    max-width: 150px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .image-wrapper {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+
 #About,
 #p1,
 #p2,

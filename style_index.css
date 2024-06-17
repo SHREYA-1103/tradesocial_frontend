@@ -1,0 +1,522 @@
+abc {
+    --mine-shaft: #343434;
+    --gray-nurse: #eff0ef;
+    --celery: #3fe915;
+    --pewter: #9ba6a2;
+    --tiara: #bbcdcc;
+    --opium: #896a6c;
+    --deco: #cce0a0;
+    --chelsea-cucumber: #6ea148;
+    --quicksand: #c4a39d;
+    --swiss-coffee: #d7c9cb;
+}
+
+/* import '@fortawesome/fontawesome-free/css/all.min.css'; */
+
+
+body {
+    background-color: white;
+    font-family: var(--body-font);
+}
+
+#logo {
+    color: #3fe915;
+    font-size: 200%;
+}
+
+.navbar {
+    padding: 0;
+    height: auto;
+}
+
+.navbar-custom .nav-link {
+    padding: 15px 15px; /* Ensure enough padding for text */
+    line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link,
+.navbar-toggler {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px; /* Add margin between nav items if needed */
+}
+
+.navbar-collapse {
+    padding: 0;
+}
+
+.navbar-custom {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    border: none;
+    box-shadow: 0 4px 8px rgba(128, 128, 128, 0.5);
+    z-index: 1000;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler {
+    color: white;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: lightgray;
+}
+
+.navbar-custom .dropdown-menu {
+    background-color: black;
+}
+
+.navbar-custom .dropdown-item {
+    color: white;
+}
+
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    color: black;
+    background-color: lightgray;
+}
+
+.navbar-custom {
+    background-color: black;
+    border: none;
+    box-shadow: 0 4px 8px rgba(187, 177, 177, 0.1);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler {
+    color: #3fe915;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: lightgray;
+}
+
+.navbar-custom .dropdown-menu {
+    background-color: black;
+}
+
+.navbar-custom .dropdown-item {
+    color: #3fe915;
+}
+
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    color: black;
+    background-color: lightgray;
+}
+
+.container-fluid {
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+#header h2 {
+    color: black;
+    font-size: 400%;
+}
+
+#header p {
+    color: #6ea148;
+    font-size: 150%;
+}
+
+#p2{
+    text-align: center;
+    font-size: large;
+    color: black;
+}
+
+#outer-header {
+    padding: 30px;
+    height: auto; /* Adjust to auto to let content define height */
+    margin-bottom: 20px; /* Add margin at the bottom to separate from the next section */
+}
+
+:root {
+    --body-font: 'Syne', sans-serif;
+}
+
+body .cards {
+    padding: 20px;
+}
+
+.cards {
+    place-items: center;
+    height: 17rem;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+.cards .card1,
+.cards .card2,
+.cards .card3,
+.cards .card4 {
+    background-color: #343434;
+    border-radius: 10px;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+    font-size: 2.5ch;
+    color: white;
+    font-weight: bold;
+}
+
+.cards .card1:hover,
+.cards .card2:hover,
+.cards .card3:hover,
+.cards .card4:hover {
+    background-color: rgba(63, 233, 21, 0.8);
+    transform: translateY(-10px);
+}
+
+.card-icon{
+    display:block;
+    font-size: 2rem;
+}
+
+.card-content{
+    display:block;
+    font-size: 1.5rem;
+}
+
+.section-header {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    color: #343434;
+}
+
+#About,
+#p1,
+#p2,
+#p3 {
+    color: #343434;
+}
+
+#abt-sec {
+    padding: 20px 100px;
+    margin-bottom: 20px; /* Add margin at the bottom to separate from the next section */
+}
+
+.section-padding {
+    padding: 20px 20px 40px 20px; /* Adjust padding for the section */
+}
+
+.brand-carousel {
+    height: 100px; /* Set height to 100px */
+}
+
+.carousel-logo {
+    height: 50px; /* Set maximum height */
+    width: 100px; /* Set maximum width */
+    object-fit: contain; /* Ensure the image fits within the given dimensions without distortion */
+    margin: 0 auto; /* Center the logos */
+    transition: transform 0.3s ease;
+}
+
+.carousel-logo:hover {
+    transform: scale(1.2); /* Grow the image size by 10% on hover */
+}
+
+#stats {
+    color: #343434;
+    font-size: larger;
+}
+
+.stats-counter {
+    padding: 50px;
+}
+
+.img-fluid2 {
+    height: 400px;
+    width: 80%;
+}
+
+
+#img-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.stats-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.stat-number {
+    font-size: 3em; /* Adjust the size as needed */
+    color: #3fe915;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-text p {
+    margin: 0;
+}
+
+.stat-text p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: black;
+    padding: 0%;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.custom-indicators {
+    position: relative;
+    top: 20px;
+}
+
+.carousel-indicators button {
+    background-color: black;
+}
+
+.carousel-inner .carousel-item .col-md-6 {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-indicators {
+    position: relative;
+    top: 20px;
+}
+
+.carousel-inner .carousel-item .col-md-6 {
+    display: flex;
+    justify-content: center;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-header i {
+    font-size: 2rem; /* Adjust size as needed */
+    margin-bottom: 0.5rem; /* Space between icon and title */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Adjust width to move buttons away from the edges */
+}
+
+.carousel-indicators.custom-indicators {
+    bottom: -30px; /* Adjust this value to move indicators further away from cards */
+    z-index: 1; /* Ensure indicators are above other content */
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #000; /* Change color if needed */
+    opacity: 0.7;
+}
+
+#Services p{
+    font-size: large;
+    text-align: center;
+
+}
+
+#contact{
+    padding: 40px 0;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #d81e56;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: #d81e56;
+    transform: translateY(-5px); /* for moving the object upwards on hovering */
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #d81e56;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #d81e56;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #d81e56;
+}
+
+.btn.btn3{
+    display: block;
+    background: #d81e56;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .bt2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Adjust for screens smaller than 1024px */
+@media (max-width: 1024px) {
+    #outer-header, #abt-sec {
+        padding: 20px;
+        margin-bottom: 20px; /* Ensure separation between sections */
+    }
+}
+
+/* Adjust for screens smaller than 768px */
+@media (max-width: 768px) {
+    #outer-header, #abt-sec {
+        padding: 10px;
+        margin-bottom: 15px; /* Ensure separation between sections */
+    }
+
+    /* Cards grid layout adjustment for smaller screens */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px; /* Add gap between rows */
+    }
+
+    /* Welcome section layout adjustment for smaller screens */
+    #outer-header {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    #header h2 {
+        font-size: 200%; /* Adjust font size */
+    }
+    #header p {
+        font-size: 120%; /* Adjust font size */
+    }
+}
+
+/* Adjust for screens smaller than 480px */
+@media (max-width: 480px) {
+    #outer-header, #abt-sec {
+        padding: 5px;
+        margin-bottom: 10px; /* Ensure separation between sections */
+    }
+
+    /* Cards grid layout adjustment for smaller screens */
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 10px; /* Reduce padding */
+        row-gap: 10px; /* Reduce gap between rows */
+    }
+
+    /* Welcome section layout adjustment for smaller screens */
+    #outer-header {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    #header h2 {
+        font-size: 150%; /* Adjust font size */
+    }
+    #header p {
+        font-size: 100%; /* Adjust font size */
+    }
+}

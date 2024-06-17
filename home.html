@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home | {{ block.super }}{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/style_home.css' %}">
+
+</head>
+
+<body>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="{% url 'home' %}" class="nav__logo">TRADE SOCIAL.</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'index' %}" class="nav__link">Home</a>
+                        
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Posts</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'marketplace' %}" class="nav__link">MarketPlace</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <!-- Search button -->
+                <i class="ri-search-line nav__search" id="search-btn"></i>
+
+                <!-- Login button -->
+                <i class="ri-user-line nav__login" id="login-btn"></i>
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search">
+        <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" id="search-input" placeholder="What are you looking for?" class="search__input">
+        </form>
+        <div class="search__categories-container">
+            <div class="search__categories">
+                <button class="search__category" data-category="all" onclick="filterCategory('all')">All</button>
+                <button class="search__category" data-category="clothes" onclick="filterCategory('clothes')">Clothes</button>
+                <button class="search__category" data-category="kitchenware" onclick="filterCategory('kitchenware')">KitchenWare</button>
+                <button class="search__category" data-category="shoes" onclick="filterCategory('shoes')">Shoes</button>
+                <button class="search__category" data-category="shoes" onclick="filterCategory('shoes')">Bathroom</button>
+                <button class="search__category" data-category="shoes" onclick="filterCategory('shoes')">Vegetables</button>
+                <button class="search__category" data-category="shoes" onclick="filterCategory('shoes')">Groceries</button>
+                <button class="search__category" data-category="shoes" onclick="filterCategory('shoes')">Restaurants</button>
+                <button class="search__category" data-category="shoes" onclick="filterCategory('shoes')">Cafe</button>
+                <button class="search__category" data-category="shoes" onclick="filterCategory('shoes')">Fruits</button>
+                <button class="search__category" data-category="furniture" onclick="filterCategory('furniture')">Furniture</button>
+                <button class="search__category" data-category="furniture" onclick="filterCategory('furniture')">Furniture</button>
+                <button class="search__category" data-category="furniture" onclick="filterCategory('furniture')">Furniture</button>
+            </div>
+        </div>
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+
+    <!--==================== LOGIN ====================-->
+    <div class="login" id="login">
+        <form action="" class="login__form">
+            <h2 class="login__title">Trader Login</h2>
+            
+            <div class="login__group">
+                <div>
+                    <label for="email" class="login__label">Email</label>
+                    <input type="email" placeholder="Write your email" id="email" class="login__input">
+                </div>
+                
+                <div>
+                    <label for="password" class="login__label">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" class="login__input">
+                </div>
+            </div>
+
+            <div>
+                <p class="login__signup">
+                    You do not have an account? <a href="#">Sign up</a>
+                </p>
+    
+                <a href="#" class="login__forgot">
+                    You forgot your password
+                </a>
+    
+                <button type="submit" class="login__button">Log In</button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+
+
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <h2 id="post">Search by Posts</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <i class="fa-solid fa-person" id="icon1"></i>
+                                    <h3>Product Listing</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Allow merchants to create detailed listings for their products,
+                                        including descriptions, prices, and high-quality images.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <i class="fa-solid fa-star" id="icon2"></i>
+                                    <h3>Customer Reviews and Ratings</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Enable customers to leave reviews and ratings on products to
+                                        build trust and provide feedback to merchants.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <i class="fa-solid fa-handshake" id="icon3"></i>
+                                    <h2>Bargaining and Negotiation Tools</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Provide features for customers to make offers and negotiate
+                                        prices directly with merchants.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <i class="fa-solid fa-user-check" id="icon4"></i>
+                                    <h2>Verified Merchant Accounts</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Offer verification services for merchants to build credibility
+                                        and trust with customers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <i class="fa-solid fa-info-circle" id="icon5"></i>
+                                    <h3>Advertising Services</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Allow merchants to purchase advertising space on the platform
+                                        to promote their products.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                                <div class="card-header text-center">
+                                    <i class="fa-solid fa-info-circle" id="icon6"></i>
+                                    <h3>Community Features</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Develop community-building features such as forums, groups, and
+                                        events to encourage interaction and engagement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators custom-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </main>
+    
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+{% endblock %}
+

@@ -1,0 +1,630 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+--header-height: 3.5rem;
+
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+--first-color: hsl(0, 0%, 100%);
+--title-color: hsl(0, 0%, 0%);
+--text-color: hsl(0, 0%, 0%);
+--body-color: #000;
+--container-color: hsl(0, 0%, 100%);
+--border-color: hsl(0, 0%, 100%);
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+--body-font: "Syne", sans-serif;
+--h2-font-size: 1.25rem;
+--normal-font-size: .938rem;
+
+/*========== Font weight ==========*/
+--font-regular: 400;
+--font-medium: 500;
+--font-semi-bold: 600;
+
+/*========== z index ==========*/
+--z-fixed: 100;
+--z-modal: 1000;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1023px) {
+:root {
+  --h2-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+}
+}
+
+/*=============== BASE ===============*/
+
+html {
+scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+font-family: var(--body-font);
+font-size: var(--normal-font-size);
+}
+
+body {
+background-color: var(--body-color);
+color: var(--text-color);
+}
+
+input,
+button {
+border: none;
+outline: none;
+}
+
+ul {
+list-style: none;
+}
+
+a {
+text-decoration: none;
+}
+
+img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+max-width: 1300px;
+margin-inline: 1.5rem;
+} 
+
+.search,
+.login {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: var(--z-modal);
+background-color: #fff;
+backdrop-filter: blur(24px);
+-webkit-backdrop-filter: blur(24px); /* For safari */
+padding: 8rem 1.5rem 0;
+opacity: 0;
+pointer-events: none;
+transition: opacity .4s;
+}
+
+.search__close,
+.login__close {
+position: absolute;
+top: 2rem;
+right: 2rem;
+font-size: 1.5rem;
+color: var(--title-color);
+cursor: pointer;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: var(--body-color);
+box-shadow: 0 2px 16px #9ecc51;
+z-index: var(--z-fixed);
+}
+
+.nav {
+height: var(--header-height);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav__logo {
+  color: #3fe915;
+  font-size: 200%;
+}
+
+.nav__actions {
+display: flex;
+align-items: center;
+column-gap: 1rem;
+}
+
+.nav__search, 
+.nav__login, 
+.nav__toggle, 
+.nav__close {
+font-size: 1.25rem;
+color: var(--title-color);
+cursor: pointer;
+transition: color .4s;
+}
+
+:is(.nav__logo, .nav__search, .nav__login, .nav__toggle, .nav__link):hover {
+color: var(--first-color);
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1023px) {
+.nav__menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  background-color: var(--body-color);
+  box-shadow: 0 8px 16px #9ecc51;
+  width: 100%;
+  padding-block: 4.5rem 4rem;
+  transition: top .4s;
+}
+}
+
+.nav__list {
+display: flex;
+flex-direction: column;
+row-gap: 2.5rem;
+text-align: center;
+}
+
+.nav__link {
+color: var(--title-color);
+font-weight: var(--font-semi-bold);
+transition: color .4s;
+}
+
+.nav__close {
+position: absolute;
+top: 1.15rem;
+right: 1.5rem;
+}
+
+/* Show menu */
+.show-menu {
+top: 0;
+}
+
+/*=============== SEARCH ===============*/
+.search__form {
+display: flex;
+align-items: center;
+column-gap: .5rem;
+background-color: var(--container-color);
+border: 2px solid var(--border-color); 
+padding-inline: 1rem;
+border-radius: .5rem;
+transform: translateY(-1rem);
+transition: transform .4s;
+}
+
+.search__icon {
+font-size: 1.25rem;
+color: var(--title-color);
+}
+
+.search__input {
+width: 100%;
+padding-block: 1rem;
+background-color: var(--container-color);
+color: var(--text-color);
+}
+
+.search__input::placeholder {
+color: var(--text-color);
+}
+
+/* Show search */
+.show-search {
+opacity: 1;
+pointer-events: initial;
+}
+
+.show-search .search__form {
+transform: translateY(0);
+}
+
+/*=============== LOGIN ===============*/
+.login__form, 
+.login__group {
+display: grid;
+}
+
+.login__form {
+background-color: var(--container-color);
+padding: 2rem 1.5rem 2.5rem;
+box-shadow: 0 8px 32px #9ecc51;
+border-radius: 1rem;
+row-gap: 1.25rem;
+text-align: center;
+transform: translateY(-1rem);
+transition: transform .4s;
+}
+
+.login__title {
+font-size: var(--h2-font-size);
+color: var(--title-color);
+}
+
+.login__group {
+row-gap: 1rem;
+}
+
+.login__label {
+display: block;
+text-align: initial;
+color: var(--title-color);
+font-weight: var(--font-medium);
+margin-bottom: .25rem;
+}
+
+.login__input {
+width: 100%;
+background-color: var(--container-color);
+border: 2px solid var(--border-color);
+padding: 1rem;
+border-radius: .5rem;
+color: var(--text-color);
+}
+
+.login__input::placeholder {
+color: var(--text-color);
+}
+
+.login__signup {
+margin-bottom: .5rem;
+}
+
+.login__signup a {
+color: var(--first-color);
+}
+
+.login__forgot {
+display: inline-block;
+color: var(--first-color);
+margin-bottom: 1.25rem;
+}
+
+.login__button {
+display: inline-block;
+background-color:#9ecc51;
+width: 100%;
+color: #fff;
+font-weight: var(--font-semi-bold);
+padding: 1rem;
+border-radius: .5rem;
+cursor: pointer;
+transition: box-shadow .4s;
+}
+
+.login__button:hover {
+box-shadow: 0 4px 24px #9ecc51;
+}
+
+/* Show login */
+.show-login {
+opacity: 1;
+pointer-events: initial;
+}
+
+.show-login .login__form {
+transform: translateY(0);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+.search,
+.login {
+  padding-top: 10rem;
+}
+
+.search__form {
+  max-width: 450px;
+  margin-inline: auto;
+}
+
+.search__close,
+.login__close {
+  width: max-content;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  font-size: 2rem;
+}
+
+.login__form {
+  max-width: 400px;
+  margin-inline: auto;
+}
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px) {
+.nav {
+  height: calc(var(--header-height) + 2rem);
+  column-gap: 3rem;
+}
+.nav__close, 
+.nav__toggle {
+  display: none;
+}
+.nav__menu {
+  margin-left: initial;
+}
+.nav__list {
+  flex-direction: row;
+  column-gap: 3rem;
+}
+
+.login__form {
+  padding: 3rem 2rem 3.5rem;
+}
+}
+
+@media screen and (min-width: 1150px) {
+.container {
+  margin-inline: auto;
+}
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav__search {
+  margin-right: 30px; /* Adjust the value as needed */
+}
+
+.nav__link {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav__link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Adjust the height of the underline */
+  bottom: -5px; /* Adjust the position of the underline */
+  left: 50%;
+  background-color: currentColor; /* Use the current text color */
+  transition: all 0.3s ease;
+}
+
+.nav__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav__search {
+  margin-right: 20px; /* Adjust the value as needed */
+}
+
+
+.search__categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 35%;
+  margin: 0 auto;
+  padding: 5px;
+} 
+
+.search__category {
+  font-size: var(--font-semi-bold);
+  padding: .5rem 1rem;
+  margin: 1.2rem;
+  background-color: #fff; /* Set background color to black */
+  border: 2px solid #000; /* Set border color to teal */
+  border-radius: .25rem;
+  cursor: pointer;
+  transition: background-color .3s, color .3s; /* Add color transition */
+  color: #000; /* Set initial text color to white */
+}
+
+.search__category:hover {
+  font-size: var(--font-semi-bold);
+  background-color: #000; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+
+.main {
+  margin-top: 8rem;
+  border: 2px solid white;
+}
+
+.cards {
+  margin: 10px;
+  border: 2px solid white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+.each-card {
+  margin: 10px;
+  width: 150px;
+  height: 250px;
+  border: 2px solid white;
+}
+
+#image-boundary {
+  width: 150px;
+  height: 150px;
+}
+
+#post{
+  margin: 15px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+
+/* ------------------------------------------------------------------------------------------------- */
+.brand-carousel {
+  height: 100px; /* Set height to 100px */
+}
+
+.carousel-logo {
+  height: 50px; /* Set maximum height */
+  width: 100px; /* Set maximum width */
+  object-fit: contain; /* Ensure the image fits within the given dimensions without distortion */
+  margin: 0 auto; /* Center the logos */
+  transition: transform 0.3s ease;
+}
+
+.carousel-logo:hover {
+  transform: scale(1.2); /* Grow the image size by 20% on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  padding: 0%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.custom-indicators {
+  position: relative;
+  top: 20px;
+}
+
+.carousel-indicators button {
+  background-color: black;
+}
+
+.carousel-inner .carousel-item .col-md-6 {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-indicators {
+  position: relative;
+  top: 20px;
+}
+
+.carousel-inner .carousel-item .col-md-6 {
+  display: flex;
+  justify-content: center;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-header i {
+  font-size: 2rem; /* Adjust size as needed */
+  margin-bottom: 0.5rem; /* Space between icon and title */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust width to move buttons away from the edges */
+}
+
+.carousel-indicators.custom-indicators {
+  bottom: -30px; /* Adjust this value to move indicators further away from cards */
+  z-index: 1; /* Ensure indicators are above other content */
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000; /* Change color if needed */
+  opacity: 0.7;
+}
+
+body .cards {
+  padding: 20px;
+}
+
+.cards {
+  place-items: center;
+  height: 17rem;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+
+.cards .card1,
+.cards .card2,
+.cards .card3,
+.cards .card4 {
+  background-color: #343434;
+  border-radius: 10px;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  font-size: 2.5ch;
+  color: white;
+  font-weight: bold;
+}
+
+.cards .card1:hover,
+.cards .card2:hover,
+.cards .card3:hover,
+.cards .card4:hover {
+  background-color: rgba(63, 233, 21, 0.8);
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  display: block;
+  font-size: 2rem;
+}
+
+.card-content {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.section-header {
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  color: #343434;
+}

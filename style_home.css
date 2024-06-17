@@ -8,9 +8,9 @@
 /*========== Colors ==========*/
 /*Color mode HSL(hue, saturation, lightness)*/
 --first-color: hsl(0, 0%, 100%);
---title-color: hsl(0, 0%, 0%);
---text-color: hsl(0, 0%, 0%);
---body-color: #000;
+--title-color: white;
+--text-color: white;
+--body-color: black;
 --container-color: hsl(0, 0%, 100%);
 --border-color: hsl(0, 0%, 100%);
 

@@ -402,6 +402,11 @@ hr {
     margin-bottom: 0.5rem; /* Space between icon and title */
 }
 
+.black{
+    background-color: black;
+    color:white;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%; /* Adjust width to move buttons away from the edges */

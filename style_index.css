@@ -497,7 +497,6 @@ form .bt2 {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #3fe915;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -506,13 +505,9 @@ form .bt2 {
     transition: background 0.5s;
 }
 
-.btn:hover {
+.btn.btn3:hover {
     background: #3fe915;
-}
-
-.btn.btn2 {
-    display: inline-block;
-    background: #3fe915;
+    color: black;
 }
 
 .btn.btn3 {

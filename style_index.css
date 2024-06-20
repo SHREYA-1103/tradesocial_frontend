@@ -58,6 +58,34 @@ body {
     z-index: 1000;
 }
 
+
+@media (max-width: 768px) {
+    #logo {
+        font-size: 1.2rem; /* Adjust the size as needed */
+    }
+}
+
+@media (max-width: 576px) {
+    #logo {
+        font-size: 1rem; /* Adjust the size as needed */
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='green' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#logo {
+    font-size: 1.5rem; /* Adjust this size for small screens if needed */
+}
+
+@media (max-width: 992px) {
+    #logo {
+        font-size: 1rem; /* Adjust this size for smaller screens */
+    }
+}
+
+
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link,
 .navbar-custom .navbar-toggler {
@@ -581,7 +609,7 @@ form .bt2 {
 }
 
 .footer .footer-links ul li a {
-    color: #3fe915;;
+    color: #3fe915;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -613,7 +641,7 @@ form .bt2 {
 }
 
 .email{
-    color: #000;
+    color: #3fe915;;
     text-decoration: none;
 }
 

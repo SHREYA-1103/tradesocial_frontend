@@ -1,0 +1,149 @@
+/* Reset default margin and padding */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Syne', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: white; /* Set default text color to white */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjust to start at the top */
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling if content is too tall */
+}
+
+.signup-container {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+    margin-top: 20px; /* Add margin to prevent clipping at the top */
+}
+
+.signup-form {
+    background-color: #0c0c0c;
+    padding: 20px;
+    border-radius: 8px;
+    color: white; /* Set form text color to white */
+}
+
+h2 {
+    text-align: center;
+    color: #fff; /* Set heading text color to white */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white; /* Set legend text color to white */
+}
+
+label {
+    font-weight: bold;
+    color: white; /* Set label text color to white */
+}
+
+/* Style for all input types */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="url"],
+textarea,
+input[type="date"],
+input[type="file"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: transparent; /* Set background to transparent */
+    color: inherit; /* Inherit text color (white) */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease; /* Add transition for border color */
+}
+
+/* Class for smaller input fields */
+.small-input {
+    width: calc(50% - 20px);
+}
+
+/* Hover effect for inputs */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="password"]:hover,
+input[type="url"]:hover,
+textarea:hover,
+input[type="date"]:hover,
+input[type="file"]:hover,
+select:hover {
+    border-color: #999; /* Change border color on hover */
+}
+
+/* Focus effect for inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+input[type="date"]:focus,
+input[type="file"]:focus,
+select:focus {
+    border-color: #3fe915; /* Change border color on focus */
+}
+
+input[type="file"] {
+    width: auto;
+}
+
+#upload-button {
+    background-color: #3fe915;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#upload-button:hover {
+    background-color: #3bb91b;
+}
+
+
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%;
+    }
+}

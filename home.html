@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="{% static 'css/style_home.css' %}">
+    <link rel="stylesheet" href="style_home.css">
 </head>
 
 <body>
@@ -16,21 +16,21 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="{% url 'home' %}" class="nav__logo">TRADE SOCIAL.</a>
+            <a href="index.html" class="nav__logo">TRADE SOCIAL.</a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="{% url 'index' %}" class="nav__link">Home</a>
+                        <a href="index.html#Home" class="nav__link">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="{% url 'marketplace' %}" class="nav__link">MarketPlace</a>
+                        <a href="marketplace.html" class="nav__link">MarketPlace</a>
                     </li>
                     <li class="nav__item">
                         <a href="#post_direct" class="nav__link">Posts</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Contact Us</a>
+                        <a href="index.html#Contact" class="nav__link">Contact Us</a>
                     </li>
                 </ul>
 
@@ -77,58 +77,58 @@
             <div class="carousel">
                 <div class="carousel-track">
                     <div class="carousel-item" data-filter=".food">
-                        <img src="{% static 'images/Foods_home.jpg' %}"/>
+                        <img src="images/Foods_home.jpg"/>
                         <div class="overlay">
                             <div class="text">Foods</div>
                         </div>
                     </div>
                     <div class="carousel-item" data-filter=".automobile">
-                        <img src="{% static 'images/Public_Sectors_home.jpg' %}"/>
+                        <img src="images/Public_Sectors_home.jpg"/>
                         <div class="overlay">
                             <div class="text">Automobile</div>
                         </div>
                     </div>
                     <!-- Add more carousel items with respective data-filter attributes -->
                     <div class="carousel-item" data-filter=".technology">
-                      <img src="{% static 'images/Technology_blog.jpg' %}"/>
+                      <img src="images/Technology_blog.jpg"/>
                       <div class="overlay">
                           <div class="text">Technology</div>
                       </div>
                   </div>
                   <div class="carousel-item" data-filter=".food">
-                    <img src="{% static 'images/Foods_home.jpg' %}"/>
+                    <img src="images/Foods_home.jpg"/>
                     <div class="overlay">
                         <div class="text">Foods</div>
                     </div>
                   </div>
                   <div class="carousel-item" data-filter=".automobile">
-                      <img src="{% static 'images/Public_Sectors_home.jpg' %}"/>
+                      <img src="images/Public_Sectors_home.jpg"/>
                       <div class="overlay">
                           <div class="text">Automobile</div>
                       </div>
                   </div>
                   <!-- Add more carousel items with respective data-filter attributes -->
                   <div class="carousel-item" data-filter=".technology">
-                    <img src="{% static 'images/Technology_blog.jpg' %}"/>
+                    <img src="images/Technology_blog.jpg"/>
                     <div class="overlay">
                         <div class="text">Technology</div>
                     </div>
                   </div>
                 <div class="carousel-item" data-filter=".food">
-                  <img src="{% static 'images/Foods_home.jpg' %}"/>
+                  <img src="images/Foods_home.jpg"/>
                   <div class="overlay">
                       <div class="text">Foods</div>
                   </div>
                 </div>
                 <div class="carousel-item" data-filter=".automobile">
-                    <img src="{% static 'images/Public_Sectors_home.jpg' %}"/>
+                    <img src="images/Public_Sectors_home.jpg"/>
                     <div class="overlay">
                         <div class="text">Automobile</div>
                     </div>
                 </div>
                 <!-- Add more carousel items with respective data-filter attributes -->
                 <div class="carousel-item" data-filter=".technology">
-                  <img src="{% static 'images/Technology_blog.jpg' %}"/>
+                  <img src="images/Technology_blog.jpg"/>
                   <div class="overlay">
                       <div class="text">Technology</div>
                   </div>
@@ -144,7 +144,7 @@
 
           <div class="card food">
             <div class="card__header">
-                <img src="{% static 'images/Food_blog.jpg' %}" class="card__image">
+                <img src="images/Food_blog.jpg" class="card__image">
             </div>
             <div class="card__body">
                 <span class="tag tag-brown">Food</span>
@@ -167,7 +167,7 @@
 
           <div class="card automobile">
             <div class="card__header">
-                <img src="{% static 'images/Automobile_blog.jpg' %}" class="card__image">
+                <img src="images/Automobile_blog.jpg" class="card__image">
             </div>
             <div class="card__body">
                 <span class="tag tag-red">Automobile</span>
@@ -190,7 +190,7 @@
           <!-- Add more blog cards with respective classes for different tags -->
           <div class="card technology">
             <div class="card__header">
-                <img src="{% static 'images/Technology_blog.jpg' %}" class="card__image">
+                <img src="images/Technology_blog.jpg" class="card__image">
             </div>
             <div class="card__body">
                 <span class="tag tag-blue">Technology</span>
@@ -212,7 +212,7 @@
 
           <div class="card food">
             <div class="card__header">
-                <img src="{% static 'images/Food_blog.jpg' %}" class="card__image">
+                <img src="images/Food_blog.jpg" class="card__image">
             </div>
             <div class="card__body">
                 <span class="tag tag-brown">Food</span>

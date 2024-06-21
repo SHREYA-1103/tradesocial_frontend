@@ -25,6 +25,7 @@ body {
 
 /* -------------------------------------------- NAVIGATION BAR -------------------------------------------- */
 #logo {
+    font-family: 'Syne', sans-serif;
     color: #3fe915;
     font-size: 200%;
 }
@@ -50,7 +51,8 @@ body {
     margin-left: 10px; /* Add margin between nav items if needed */
 }
 
-.navbar-collapse {
+.navbar-collapse {    
+    font-family: 'Syne', sans-serif;
     padding: 0;
 }
 

@@ -10,6 +10,7 @@ html, body {
 
 /* -------------------------------------------- NAVIGATION BAR -------------------------------------------- */
 #logo {
+    font-family: 'Syne', sans-serif;
     color: #3fe915;
     font-size: 200%;
 }
@@ -36,6 +37,7 @@ html, body {
 }
 
 .navbar-collapse {
+    font-family: 'Syne', sans-serif;
     padding: 0;
 }
 
